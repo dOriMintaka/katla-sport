@@ -27,5 +27,7 @@ export class HiveListComponent implements OnInit {
   }
 
   onRestore(hiveId: number) {
+    var hive = this.hives.find(i => i.id == hiveId);
+    this.hiveService.setHiveStatus(hiveId, false).subscribe(i => hive.isDeleted = false);
   }
 }
