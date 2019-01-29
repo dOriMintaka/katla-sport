@@ -35,7 +35,7 @@ export class HiveService {
   }
 
   deleteHive(hiveId: number): Observable<Object> {
-    return this.http.delete<Object>('${this.url}${hiveId}');
+    return this.http.delete<Object>(`${this.url}${hiveId}`);
   }
 
   setHiveStatus(hiveId: number, deletedStatus: boolean): Observable<Object> {
